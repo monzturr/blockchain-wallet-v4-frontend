@@ -7,7 +7,7 @@ import { promptForSecondPassword, promptForInput } from 'services/SagaService'
 import { utils } from 'blockchain-wallet-v4/src'
 
 const { IMPORT_ADDR } = model.analytics.ADDRESS_EVENTS
-export default ({ api, coreSagas, networks }) => {
+export default ({ api, coreSagas, imports: { securityModule }, networks }) => {
   const logLocation = 'components/importBtcAddress/sagas'
 
   const importBtcAddressSubmitClicked = function * () {
